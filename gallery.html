@@ -3,14 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Wireframe Site | Gallery</title>
+    <title>Bloom Valley | Gallery</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="logo-box" href="index.html">
-        <img src="logo.png" alt="Site logo">
-      </a>
+      <a class="logo-box" href="index.html"><img src="logo.png" alt="Site logo"></a>
       <div class="brand-name">Bloom Valley Nursery</div>
       <nav class="nav-menu" aria-label="Primary navigation">
         <a href="index.html">Home</a>
@@ -19,160 +17,43 @@
         <a href="custom.html">Community</a>
       </nav>
     </header>
-
     <main>
       <h1 class="page-title">Shop Bloom Valley Nursery</h1>
-
       <section class="wire-box">
-        <div class="gallery-toolbar">
-          <button class="cart-button" type="button" id="view-cart">View Shopping Cart</button>
+        <div class="cart-actions">
+          <button class="cart-button view-cart" type="button">View Shopping Cart</button>
+          <button class="cart-button clear-cart" type="button">Clear Cart</button>
+          <button class="cart-button process-order" type="button">Process Order</button>
         </div>
-        <div class="cart-status" id="cart-status" aria-live="polite"></div>
         <div class="gallery-grid">
-          <article class="gallery-card product-card">
-            <img class="product-image" src="string-of-pearls.png" alt="String of Pearls hanging plant">
-            <h2>String of Pearls</h2>
-            <p>Trailing house plant with bead-like leaves for bright indoor spaces.</p>
-            <button class="button-placeholder add-to-cart" type="button" data-item="String of Pearls">Add to Cart</button>
-          </article>
-          <article class="gallery-card product-card">
-            <img class="product-image" src="aloe-plant.png" alt="Aloe plant">
-            <h2>Aloe Plant</h2>
-            <p>Low-maintenance succulent with sculptural leaves and easy care needs.</p>
-            <button class="button-placeholder add-to-cart" type="button" data-item="Aloe Plant">Add to Cart</button>
-          </article>
-          <article class="gallery-card product-card">
-            <img class="product-image" src="apple-tree.png" alt="Apple tree with red apples">
-            <h2>Apple Tree</h2>
-            <p>Fruit tree starter with seasonal color and backyard harvest potential.</p>
-            <button class="button-placeholder add-to-cart" type="button" data-item="Apple Tree">Add to Cart</button>
-          </article>
-          <article class="gallery-card product-card">
-            <img class="product-image" src="birch-tree.png" alt="Birch tree">
-            <h2>Birch Tree</h2>
-            <p>Graceful landscape tree with light bark and airy foliage.</p>
-            <button class="button-placeholder add-to-cart" type="button" data-item="Birch Tree">Add to Cart</button>
-          </article>
-          <article class="gallery-card product-card">
-            <img class="product-image" src="maple-tree.png" alt="Maple tree">
-            <h2>Maple Tree</h2>
-            <p>Classic shade tree known for strong structure and brilliant fall color.</p>
-            <button class="button-placeholder add-to-cart" type="button" data-item="Maple Tree">Add to Cart</button>
-          </article>
-          <article class="gallery-card product-card">
-            <img class="product-image" src="watering-can.png" alt="Blue watering can">
-            <h2>Watering Can</h2>
-            <p>Durable garden supply for everyday watering indoors or outside.</p>
-            <button class="button-placeholder add-to-cart" type="button" data-item="Watering Can">Add to Cart</button>
-          </article>
-          <article class="gallery-card product-card">
-            <img class="product-image" src="hero-potting-soil.png" alt="Potting soil and garden trowel">
-            <h2>Potting Soil</h2>
-            <p>Rich planting mix for containers, starts, and healthy root growth.</p>
-            <button class="button-placeholder add-to-cart" type="button" data-item="Potting Soil">Add to Cart</button>
-          </article>
-          <article class="gallery-card product-card">
-            <img class="product-image" src="bird-house.png" alt="Wooden bird house">
-            <h2>Bird House</h2>
-            <p>Decorative outdoor accent that invites wildlife into the garden.</p>
-            <button class="button-placeholder add-to-cart" type="button" data-item="Bird House">Add to Cart</button>
-          </article>
-          <article class="gallery-card product-card">
-            <img class="product-image" src="spider-plant.png" alt="Spider plant">
-            <h2>Spider Plant</h2>
-            <p>Easygoing house plant with arching leaves and bright variegation.</p>
-            <button class="button-placeholder add-to-cart" type="button" data-item="Spider Plant">Add to Cart</button>
-          </article>
+          <article class="gallery-card product-card"><img class="product-image" src="string-of-pearls.png" alt="String of Pearls hanging plant"><h2>String of Pearls</h2><p>Trailing house plant with bead-like leaves for bright indoor spaces.</p><button class="button-placeholder add-to-cart" type="button" data-item="String of Pearls">Add to Cart</button></article>
+          <article class="gallery-card product-card"><img class="product-image" src="aloe-plant.png" alt="Aloe plant"><h2>Aloe Plant</h2><p>Low-maintenance succulent with sculptural leaves and easy care needs.</p><button class="button-placeholder add-to-cart" type="button" data-item="Aloe Plant">Add to Cart</button></article>
+          <article class="gallery-card product-card"><img class="product-image" src="apple-tree.png" alt="Apple tree with red apples"><h2>Apple Tree</h2><p>Fruit tree starter with seasonal color and backyard harvest potential.</p><button class="button-placeholder add-to-cart" type="button" data-item="Apple Tree">Add to Cart</button></article>
+          <article class="gallery-card product-card"><img class="product-image" src="birch-tree.png" alt="Birch tree"><h2>Birch Tree</h2><p>Graceful landscape tree with light bark and airy foliage.</p><button class="button-placeholder add-to-cart" type="button" data-item="Birch Tree">Add to Cart</button></article>
+          <article class="gallery-card product-card"><img class="product-image" src="maple-tree.png" alt="Maple tree"><h2>Maple Tree</h2><p>Classic shade tree known for strong structure and brilliant fall color.</p><button class="button-placeholder add-to-cart" type="button" data-item="Maple Tree">Add to Cart</button></article>
+          <article class="gallery-card product-card"><img class="product-image" src="watering-can.png" alt="Blue watering can"><h2>Watering Can</h2><p>Durable garden supply for everyday watering indoors or outside.</p><button class="button-placeholder add-to-cart" type="button" data-item="Watering Can">Add to Cart</button></article>
+          <article class="gallery-card product-card"><img class="product-image" src="hero-potting-soil.png" alt="Potting soil and garden trowel"><h2>Potting Soil</h2><p>Rich planting mix for containers, starts, and healthy root growth.</p><button class="button-placeholder add-to-cart" type="button" data-item="Potting Soil">Add to Cart</button></article>
+          <article class="gallery-card product-card"><img class="product-image" src="bird-house.png" alt="Wooden bird house"><h2>Bird House</h2><p>Decorative outdoor accent that invites wildlife into the garden.</p><button class="button-placeholder add-to-cart" type="button" data-item="Bird House">Add to Cart</button></article>
+          <article class="gallery-card product-card"><img class="product-image" src="spider-plant.png" alt="Spider plant"><h2>Spider Plant</h2><p>Easygoing house plant with arching leaves and bright variegation.</p><button class="button-placeholder add-to-cart" type="button" data-item="Spider Plant">Add to Cart</button></article>
         </div>
       </section>
     </main>
-
     <div class="modal-backdrop" id="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cart-title">
       <div class="cart-modal">
         <h2 id="cart-title">Shopping Cart</h2>
-        <ul class="cart-items" id="cart-items">
-          <li>*Cart Empty*</li>
+        <ul class="cart-preview-list" id="cart-preview-list" aria-live="polite">
+          <li class="empty-cart">*Cart Empty*</li>
         </ul>
         <div class="modal-actions">
-          <button class="button-placeholder" type="button" id="clear-cart">Clear Cart</button>
-          <button class="button-placeholder" type="button" id="process-order">Process Order</button>
+          <button class="button-placeholder clear-cart" type="button">Clear Cart</button>
+          <button class="button-placeholder process-order" type="button">Process Order</button>
         </div>
       </div>
     </div>
-
     <footer class="site-footer">
-      <div class="logo-box footer-logo">
-        <img src="logo.png" alt="Site logo">
-        <span>Bloom Valley Nursery</span>
-      </div>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="custom.html">Newsletter</a>
-        <a href="custom.html">Social Media</a>
-        <a href="custom.html">Community</a>
-        <a href="about.html">About Us</a>
-      </div>
+      <div class="logo-box footer-logo"><img src="logo.png" alt="Site logo"><span>Bloom Valley Nursery</span></div>
+      <div class="footer-links"><a href="index.html">Home</a><a href="gallery.html">Gallery</a><button class="subscribe-button" type="button">Subscribe</button><a href="custom.html">Social Media</a><a href="custom.html">Community</a><a href="about.html">About Us</a></div>
     </footer>
-    <script>
-      const cartItems = {};
-      const status = document.querySelector("#cart-status");
-      const modal = document.querySelector("#cart-modal");
-      const cartList = document.querySelector("#cart-items");
-
-      function renderCart() {
-        cartList.innerHTML = "";
-        const items = Object.entries(cartItems);
-        if (!items.length) {
-          const li = document.createElement("li");
-          li.textContent = "*Cart Empty*";
-          li.className = "empty-cart";
-          cartList.appendChild(li);
-          return;
-        }
-        items.forEach(([item, quantity]) => {
-          const li = document.createElement("li");
-          const name = document.createElement("span");
-          const count = document.createElement("span");
-          name.textContent = item;
-          count.className = "item-quantity";
-          count.textContent = `x${quantity}`;
-          li.append(name, count);
-          cartList.appendChild(li);
-        });
-      }
-
-      document.querySelectorAll(".add-to-cart").forEach((button) => {
-        button.addEventListener("click", () => {
-          cartItems[button.dataset.item] = (cartItems[button.dataset.item] || 0) + 1;
-          status.textContent = "Item added.";
-          renderCart();
-        });
-      });
-
-      document.querySelector("#view-cart").addEventListener("click", () => {
-        renderCart();
-        modal.classList.add("is-open");
-      });
-
-      document.querySelector("#clear-cart").addEventListener("click", () => {
-        Object.keys(cartItems).forEach((item) => {
-          delete cartItems[item];
-        });
-        status.textContent = "";
-        renderCart();
-      });
-
-      document.querySelector("#process-order").addEventListener("click", () => {
-        status.textContent = "Thank you for your order.";
-        modal.classList.remove("is-open");
-      });
-
-      modal.addEventListener("click", (event) => {
-        if (event.target === modal) {
-          modal.classList.remove("is-open");
-        }
-      });
-    </script>
+    <script src="scripts.js"></script>
   </body>
 </html>
