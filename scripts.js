@@ -1,8 +1,25 @@
-const cartItems = {};
+const CART_STORAGE_KEY = "bloomValleyCart";
+const CUSTOM_ORDER_STORAGE_KEY = "bloomValleyCustomOrder";
 const cartPreviewList = document.querySelector("#cart-preview-list");
 const cartModal = document.querySelector("#cart-modal");
 
-function updateCartPreview() {
+function getCartItems() {
+  try {
+    return JSON.parse(sessionStorage.getItem(CART_STORAGE_KEY)) || {};
+  } catch {
+    return {};
+  }
+}
+
+function saveCartItems(cartItems) {
+  sessionStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cartItems));
+}
+
+function clearStoredCart() {
+  sessionStorage.removeItem(CART_STORAGE_KEY);
+}
+
+function updateCartPreview(cartItems = getCartItems()) {
   if (!cartPreviewList) return;
 
   cartPreviewList.innerHTML = "";
@@ -37,7 +54,9 @@ document.querySelectorAll(".subscribe-button").forEach((button) => {
 document.querySelectorAll(".add-to-cart").forEach((button) => {
   button.addEventListener("click", () => {
     const item = button.dataset.item || "Item";
+    const cartItems = getCartItems();
     cartItems[item] = (cartItems[item] || 0) + 1;
+    saveCartItems(cartItems);
     updateCartPreview();
     alert("Item added to the cart.");
   });
@@ -45,9 +64,7 @@ document.querySelectorAll(".add-to-cart").forEach((button) => {
 
 document.querySelectorAll(".clear-cart").forEach((button) => {
   button.addEventListener("click", () => {
-    Object.keys(cartItems).forEach((item) => {
-      delete cartItems[item];
-    });
+    clearStoredCart();
     updateCartPreview();
     alert("Cart cleared.");
   });
@@ -55,6 +72,9 @@ document.querySelectorAll(".clear-cart").forEach((button) => {
 
 document.querySelectorAll(".process-order").forEach((button) => {
   button.addEventListener("click", () => {
+    clearStoredCart();
+    updateCartPreview();
+
     if (cartModal) {
       cartModal.classList.remove("is-open");
     }
@@ -64,7 +84,7 @@ document.querySelectorAll(".process-order").forEach((button) => {
 
 document.querySelectorAll(".view-cart").forEach((button) => {
   button.addEventListener("click", () => {
-    updateCartPreview();
+    updateCartPreview(getCartItems());
     if (cartModal) {
       cartModal.classList.add("is-open");
     }
@@ -113,6 +133,19 @@ document.querySelectorAll(".contact-form").forEach((form) => {
       emptyFields[0].focus();
       return;
     }
+
+    const customOrderData = {
+      name: form.elements.name.value.trim(),
+      email: form.elements.email.value.trim(),
+      phone: form.elements.phone.value.trim(),
+      customOrder: form.elements["custom-order"].value.trim(),
+      feedback: form.elements.feedback.value.trim()
+    };
+
+    localStorage.setItem(
+      CUSTOM_ORDER_STORAGE_KEY,
+      JSON.stringify(customOrderData)
+    );
 
     alert("Thank you for your message.");
   });
