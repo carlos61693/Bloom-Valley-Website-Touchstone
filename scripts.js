@@ -79,9 +79,41 @@ if (cartModal) {
   });
 }
 
-document.querySelectorAll(".contact-submit").forEach((button) => {
-  button.addEventListener("click", (event) => {
+document.querySelectorAll(".contact-form").forEach((form) => {
+  const fields = Array.from(form.querySelectorAll("input, textarea"));
+
+  fields.forEach((field) => {
+    field.addEventListener("input", () => {
+      if (field.value.trim()) {
+        field.closest("label").classList.remove("field-error");
+        field.removeAttribute("aria-invalid");
+      }
+    });
+  });
+
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
+
+    const emptyFields = fields.filter((field) => !field.value.trim());
+
+    if (emptyFields.length) {
+      alert("All fields must be filled.");
+
+      fields.forEach((field) => {
+        const isEmpty = !field.value.trim();
+        field.closest("label").classList.toggle("field-error", isEmpty);
+
+        if (isEmpty) {
+          field.setAttribute("aria-invalid", "true");
+        } else {
+          field.removeAttribute("aria-invalid");
+        }
+      });
+
+      emptyFields[0].focus();
+      return;
+    }
+
     alert("Thank you for your message.");
   });
 });

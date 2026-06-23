@@ -432,6 +432,7 @@ main {
 .community-list li::before { content: "•"; margin-right: 8px; font-weight: 700; }
 
 .form-placeholder label { display: grid; gap: 6px; font-size: 16px; font-weight: 700; }
+.form-placeholder label.field-error { color: #b00020; }
 .form-placeholder input, .form-placeholder textarea, .form-placeholder select {
   width: 100%;
   min-height: 44px;
